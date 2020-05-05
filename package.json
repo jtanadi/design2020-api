@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Data & API for design2020",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtanadi/design2020-api"
+  },
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node ."
