@@ -1,0 +1,19 @@
+{
+  "name": "design2020-api",
+  "version": "1.0.0",
+  "description": "Data & API for design2020",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gray-matter": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
