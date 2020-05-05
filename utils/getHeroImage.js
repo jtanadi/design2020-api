@@ -10,5 +10,5 @@ module.exports = (projectTitle) => {
     /\.(jpg$)|(jpeg$)|(png$)|(gif$)/.test(file)
   );
 
-  return path.join("/images", projectTitle, heroImg);
+  return path.join("/works", projectTitle, heroImg);
 };
