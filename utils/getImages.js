@@ -1,5 +1,9 @@
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
+
+const isHoverFile = (filename) => {
+  return /_over\.(jpg|jpeg|png|gif|tif|tiff)$/.test(filename);
+};
 
 module.exports = (projectTitle) => {
   const imageDir = path.join(process.cwd(), "works", projectTitle);
@@ -9,7 +13,20 @@ module.exports = (projectTitle) => {
     /\.(jpg|jpeg|png|gif|tif|tiff)$/.test(file)
   );
 
-  return imageFiles.map((imgFile) =>
-    path.join("/works", projectTitle, imgFile)
-  );
+  return imageFiles.reduce((acc, imageFile, i) => {
+    if (!isHoverFile(imageFile)) {
+      const retObj = {
+        url: path.join("/works", projectTitle, imageFile),
+      };
+
+      const nextImage = imageFiles[i + 1];
+      if (nextImage && isHoverFile(nextImage)) {
+        retObj.hover = path.join("/works", projectTitle, nextImage);
+      }
+
+      acc.push(retObj);
+    }
+
+    return acc;
+  }, []);
 };
