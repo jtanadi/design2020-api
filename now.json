@@ -1,9 +1,26 @@
 {
-  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "routes": [
     {
       "src": "/api/works",
-      "dest": "api/works.js"
+      "dest": "index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/work/*",
+      "dest": "index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/ids",
+      "dest": "index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/images/*",
+      "dest": "index.js",
+      "methods": ["GET"]
     }
   ]
 }
+
