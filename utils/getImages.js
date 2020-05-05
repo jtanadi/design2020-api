@@ -6,7 +6,7 @@ module.exports = (projectTitle) => {
 
   const files = fs.readdirSync(imageDir);
   const imageFiles = files.filter((file) =>
-    /\.(jpg$)|(jpeg$)|(png$)|(gif$)/.test(file)
+    /\.(jpg|jpeg|png|gif|tif|tiff)$/.test(file)
   );
 
   return imageFiles.map((imgFile) =>

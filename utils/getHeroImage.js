@@ -7,7 +7,7 @@ module.exports = (projectTitle) => {
 
   const files = fs.readdirSync(imageDir);
   const heroImg = files.find((file) =>
-    /\.(jpg$)|(jpeg$)|(png$)|(gif$)/.test(file)
+    /\.(jpg|jpeg|png|gif|tif|tiff)$/.test(file)
   );
 
   return path.join("/works", projectTitle, heroImg);
