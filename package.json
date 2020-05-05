@@ -8,7 +8,7 @@
     "url": "https://github.com/jtanadi/design2020-api"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "now dev"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,5 @@
   "dependencies": {
     "gray-matter": "^4.0.2"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+  "devDependencies": {}
 }
