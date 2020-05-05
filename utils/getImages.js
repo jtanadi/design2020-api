@@ -10,6 +10,6 @@ module.exports = (projectTitle) => {
   );
 
   return imageFiles.map((imgFile) =>
-    path.join("/works", projectTitle, imgFile)
+    path.join("/_works", projectTitle, imgFile)
   );
 };
