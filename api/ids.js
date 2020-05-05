@@ -1,6 +1,6 @@
-const getWorkIds = require("../utils/getWorkIds")
+const getWorkIds = require("../utils/getWorkIds");
 
 module.exports = (req, res) => {
-  const workIds = getWorkIds()
-  res.send(workIds)
-}
+  const workIds = getWorkIds();
+  res.send(workIds);
+};

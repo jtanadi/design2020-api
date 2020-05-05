@@ -1,5 +1,5 @@
-const fs = require("fs")
-const worksPath = require("./worksPath")
+const fs = require("fs");
+const worksPath = require("./worksPath");
 
 module.exports = () => {
   const works = fs.readdirSync(worksPath);

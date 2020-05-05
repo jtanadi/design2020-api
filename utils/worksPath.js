@@ -1,2 +1,2 @@
-const path = require("path")
-module.exports = path.join(process.cwd(), "works")
+const path = require("path");
+module.exports = path.join(process.cwd(), "works");

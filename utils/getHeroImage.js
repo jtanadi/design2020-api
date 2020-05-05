@@ -1,5 +1,5 @@
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 
 // Hero image defaults to first image
 module.exports = (projectTitle) => {

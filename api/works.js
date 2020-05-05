@@ -1,6 +1,6 @@
-const getAllWorks = require("../utils/getAllWorks")
+const getAllWorks = require("../utils/getAllWorks");
 
 module.exports = (req, res) => {
-  const allWorks = getAllWorks()
-  res.send(allWorks)
-}
+  const allWorks = getAllWorks();
+  res.send(allWorks);
+};
