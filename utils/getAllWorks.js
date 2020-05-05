@@ -1,9 +1,9 @@
-const fs = require("fs")
-const matter = require("gray-matter")
-const path = require("path")
+const fs = require("fs");
+const matter = require("gray-matter");
+const path = require("path");
 
-const worksPath = require("./worksPath")
-const getHeroImage = require("./getHeroImage")
+const worksPath = require("./worksPath");
+const getHeroImage = require("./getHeroImage");
 
 module.exports = () => {
   const works = fs.readdirSync(worksPath);
