@@ -1,10 +1,11 @@
 const fs = require("fs");
 const path = require("path");
+const worksPath = require("../utils/worksPath");
 
 const { isDetailFile, isImage } = require("./checkers");
 
 module.exports = (projectTitle) => {
-  const imageDir = path.join(process.cwd(), "works", projectTitle);
+  const imageDir = path.join(worksPath, projectTitle);
 
   const files = fs.readdirSync(imageDir);
   const imageFiles = files.filter((file) => isImage(file));
@@ -12,12 +13,12 @@ module.exports = (projectTitle) => {
   return imageFiles.reduce((acc, imageFile, i) => {
     if (!isDetailFile(imageFile)) {
       const retObj = {
-        url: path.join("/works", projectTitle, imageFile),
+        url: `/data/works/${projectTitle}/${imageFile}`,
       };
 
       const nextImage = imageFiles[i + 1];
       if (nextImage && isDetailFile(nextImage)) {
-        retObj.detailUrl = path.join("/works", projectTitle, nextImage);
+        retObj.detailUrl = `/data/works/${projectTitle}/${nextImage}`;
       }
 
       acc.push(retObj);
