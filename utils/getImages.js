@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const worksPath = require("../utils/worksPath");
 
+const { worksPath } = require("../utils/paths");
 const { isDetailFile, isImage } = require("./checkers");
 
 module.exports = (projectTitle) => {

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const { isImage } = require("./checkers");
-const worksPath = require("./worksPath");
+const { worksPath } = require("./paths");
 
 // Hero image defaults to first image
 module.exports = (projectTitle) => {

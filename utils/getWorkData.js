@@ -2,7 +2,7 @@ const fs = require("fs");
 const matter = require("gray-matter");
 const path = require("path");
 
-const worksPath = require("./worksPath");
+const { worksPath } = require("./paths");
 const getHeroImage = require("./getHeroImage");
 const getImages = require("./getImages");
 
