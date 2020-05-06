@@ -6,8 +6,8 @@ const { dataPath } = require("../utils/paths");
 module.exports = (req, res) => {
   const bioFile = path.join(dataPath, "bio.md");
 
-  fs.readFile(bioFile, (err, data) => {
+  fs.readFile(bioFile, "utf8", (err, data) => {
     if (err) throw err;
-    res.send(data);
+    res.json(data);
   });
 };
