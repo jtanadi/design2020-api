@@ -17,7 +17,7 @@ module.exports = (projectTitle) => {
 
       const nextImage = imageFiles[i + 1];
       if (nextImage && isDetailFile(nextImage)) {
-        retObj.hoverUrl = path.join("/works", projectTitle, nextImage);
+        retObj.detailUrl = path.join("/works", projectTitle, nextImage);
       }
 
       acc.push(retObj);
