@@ -1,9 +1,9 @@
 ---
 title: Scotty
 short: Scotty is a WebSocket-enabled PDF viewer, allowing multiple clients to look at and browse through a document together in real time.
-tags: TypeScript, React, Node, Express, Socket.IO, AWS S3, RAA Tools
+tags: Dev, TypeScript, React, Node, Express, Socket.IO, AWS S3, RAA Tools
 links: 
-    - name: View
+    - name: Launch
       url: https://raa-scotty.herokuapp.com/
     - name: GitHub
       url: https://github.com/raa-tools/scotty
