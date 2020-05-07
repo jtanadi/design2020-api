@@ -11,5 +11,5 @@ module.exports = (projectTitle) => {
   const files = fs.readdirSync(imageDir);
   const heroImg = files.find((file) => isImage(file));
 
-  return `/data/works/${projectTitle}/${heroImg}`;
+  return heroImg ? `/data/works/${projectTitle}/${heroImg}` : null;
 };
