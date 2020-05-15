@@ -7,21 +7,23 @@ const getHeroImage = require("./getHeroImage");
 
 module.exports = () => {
   const works = fs.readdirSync(worksPath);
-  return works.map((work) => {
-    const workFilePath = path.join(worksPath, work, "index.md");
+  return works
+    .filter((work) => !work.startsWith("z-"))
+    .map((work) => {
+      const workFilePath = path.join(worksPath, work, "index.md");
 
-    const hero = getHeroImage(work);
+      const hero = getHeroImage(work);
 
-    const workFile = fs.readFileSync(workFilePath, "utf8");
-    const { data } = matter(workFile);
-    const { title, tags, short } = data;
+      const workFile = fs.readFileSync(workFilePath, "utf8");
+      const { data } = matter(workFile);
+      const { title, tags, short } = data;
 
-    return {
-      id: work,
-      title,
-      description: short || null,
-      hero,
-      tags: tags.split(/,\s*/),
-    };
-  });
+      return {
+        id: work,
+        title,
+        description: short || null,
+        hero,
+        tags: tags.split(/,\s*/),
+      };
+    });
 };
