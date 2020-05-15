@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 const { worksPath } = require("../utils/paths");
-const { isDetailFile, isImage } = require("./checkers");
+const { isDetailFile, isImageOrVideo } = require("./checkers");
 
 module.exports = (projectTitle) => {
   const imageDir = path.join(worksPath, projectTitle);
 
   const files = fs.readdirSync(imageDir);
-  const imageFiles = files.filter((file) => isImage(file));
+  const imageFiles = files.filter((file) => isImageOrVideo(file));
 
   return imageFiles.reduce((acc, imageFile, i) => {
     if (!isDetailFile(imageFile)) {
