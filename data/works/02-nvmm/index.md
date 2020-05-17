@@ -1,5 +1,5 @@
 ---
-title: National Veterans Memorial and Museum
+title: National Veterans Memorial and&nbsp;Museum
 short: The National Veterans Memorial and Museum—officially designated by the federal government as a national museum—honors veterans past and present who have served the nation and recognizes those who have answered the call of duty throughout America’s history.
 tags: 
     - RAA

@@ -9,9 +9,6 @@ links:
       url: https://raa-scotty.herokuapp.com/
     - name: View on GitHub
       url: https://github.com/raa-tools/scotty
-footnotes:
-    - Scotty was written in TypeScript, React, Node, and Express, and uses socket.io to manage its WebSocket connections.
-    - v1.0 redesign is in the works. View it on Figma [here](https://www.figma.com/file/nB8XWWZCOI7kFJGivVbsWh/scotty?node-id=0%3A1).
 ---
 
 Scotty is a browser-based PDF viewer that leverages WebSocket to allow multiple users to be on the same page. The app was developed at RAA to address the design teams' need of reviewing architectural drawings and exhibition graphics together while working remotely.
@@ -22,3 +19,4 @@ Using Scotty, client-side actions such as navigating to a specific page or point
 
 Because the blocking nature of rendering PDFs on the front end is problematic, Scotty uses [conveyor](https://github.com/raa-tools/conveyor/) to convert PDF documents to optimized images before uploading them to an AWS S3 bucket.
 
+Scotty was written in TypeScript, React, Node, and Express, and uses socket.io to manage its WebSocket connections. A redesign is in the works and can be viewed on [Figma](https://www.figma.com/file/nB8XWWZCOI7kFJGivVbsWh/scotty?node-id=0%3A1).
