@@ -1,7 +1,7 @@
 ---
-title: "RISD Architecture Lecture Series"
-short: "Lecture posters and mailer for RISD Architecture."
-tags: "Design System, Print"
+title: RISD Architecture Lecture Series
+short: Lecture posters and mailer for RISD Architecture.
+tags: Print Design, Design System
 ---
 
 Architecture lecture posters are typically designed to emphasize the names of visiting lecturers. The students, in turn, place these names at the top of the hierarchy of events, relegating all others as unimportant.
