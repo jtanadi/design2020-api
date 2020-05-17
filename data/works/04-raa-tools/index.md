@@ -1,7 +1,7 @@
 ---
 title: RAA Tools Directory (RTD)
 short: RTD is a microsite that makes it easier for designers to browse through, search, and download all available scripts and internal design tools. Scripts are listed by repository, typically categorized by language.
-tags: Dev, RAA Tools
+tags: Dev, Design Tools, RAA Tools
 links: 
     - name: Launch
       url: https://raa-tools.github.io/

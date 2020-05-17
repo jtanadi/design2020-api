@@ -1,7 +1,7 @@
 ---
 title: Scotty
 short: Scotty is a WebSocket-enabled PDF viewer that allows multiple clients to look at and browse through a document together in real time. The app is designed to be a minimal viewer and a quick way for design teams to share internal documents.
-tags: Design Tool, RAA Tools
+tags: Design Tools, RAA Tools
 links: 
     - name: Launch
       url: https://raa-scotty.herokuapp.com/
