@@ -14,6 +14,7 @@ footnotes:
     - "Photographs courtesy of [Ralph Appelbaum Associates](http://www.raany.com/)."
 ---
 
-The Museum is the first dedicated to the veteran’s experience, and is a place to celebrate and honor the service and sacrifice of all veterans from the Revolutionary War to the present. 
+Located in downtown Columbus, Ohio, the NVMM is the first museum dedicated to the veteran’s experience, and is a place to celebrate and honor the service and sacrifice of all veterans. Stories are primarily told through two exhibit elements: freestanding thematic displays and an historic timeline. The thematic displays are sited perpendicular to the visitors’ path, forming a set of “stations” for visitors to step through the military experience, from civilian, to soldier, to veteran. The historic timeline exists parallel to the musem’s main circulation, forming a backdrop that walks the visitor through American conficts, from the Revolutionary War to the present.
 
-Located on the Scioto Peninsula it is also a key part of the revival of downtown Columbus, Ohio.
+Each exhibit element is made up of components that are assembled together to tell a multifaceted story of the veteran experience. While the consistency of the thematic display provides a rhythm to the visitor experience, the timeline consists of a set of interchangeable kit-of-parts systematically designed to hold specific types of content.
+
