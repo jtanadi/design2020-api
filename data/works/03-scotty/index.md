@@ -1,14 +1,21 @@
 ---
 title: Scotty
-short: Scotty is a WebSocket-enabled PDF viewer, allowing multiple clients to look at and browse through a document together in real time.
-tags: Dev, TypeScript, React, Node, Express, Socket.IO, AWS S3, RAA Tools
+short: Scotty is a WebSocket-enabled PDF viewer that allows multiple clients to look at and browse through a document together in real time. The app is designed to be a minimal viewer and a quick way for design teams to share internal documents.
+tags: Design Tool, RAA Tools
 links: 
     - name: Launch
       url: https://raa-scotty.herokuapp.com/
-    - name: GitHub
+    - name: View on GitHub
       url: https://github.com/raa-tools/scotty
 ---
 
-Scotty is a WebSocket-enabled PDF viewer that allows multiple clients to view and browse through a document together, in real time. The app was developed at RAA to address the design teams' need of reviewing architectural drawings and exhibition graphics while working remotely.
+Scotty is a browser-based PDF viewer that leverages WebSocket to allow multiple users to be on the same page. The app was developed at RAA to address the design teams' need of reviewing architectural drawings and exhibition graphics together while working remotely.
 
-Prior to Scotty, designers had two options: either share a screen on a video call or send the PDF to the design team ahead of time, both of which are not ideal. When sharing a screen, there is an explicit presenter/viewer relationship, where only one person has access to the document. On the other hand, if a document is distributed prior to a call, it's difficult for all participants to stay synchronized during the call. Scotty solves this by giving every participant access to the same view of the document and putting them literally on the same page.
+Prior to Scotty, design teams had less-than-ideal options to look at a document during a call: share a screen or send the PDF to teammates ahead of time. With the first option, only one user has direct access to the document. On the other hand, distributing a document makes it difficult for all participants to stay on the same page during the call.
+
+Using Scotty, client-side actions such as navigating to a specific page or pointing with the cursor are sent to all clients connected to that document. A user starts by uploading a PDF document, after which Scotty returns a URL. Users are invted to view the document by navigating to that URL.
+
+Because the blocking nature of rendering PDFs on the front end is problematic, Scotty uses [conveyor](https://github.com/raa-tools/conveyor/) to convert PDF documents to optimized images before uploading them to an AWS S3 bucket.
+
+###### Scotty was written in TypeScript, React, Node, and Express, and uses socket.io to manage its WebSocket connections.
+###### v1.0 redesign is in the works. View it on Figma [here](https://www.figma.com/file/nB8XWWZCOI7kFJGivVbsWh/scotty?node-id=0%3A1).
