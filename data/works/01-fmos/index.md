@@ -1,5 +1,5 @@
 ---
-title: Frost Museum of&nbsp;Science
+title: Frost Museum of Science
 short: MeLab at the Frost Museum of Science is a gallery that focuses on your body’s relationship to science. Through interactive exhibitions and games, visitors learn about how their daily activities impact their health and wellbeing.
 tags:
     - RAA
