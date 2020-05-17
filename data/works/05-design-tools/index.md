@@ -1,7 +1,8 @@
 ---
 title: Design Tools
 short: A selection of design and design production tools, plugins, and scripts, written for InDesign and RoboFont.
-tags: Design Tools
+tags:
+    - Design Tools
 ---
 
 Over the years, I have developed a number of design and design production tools. Some were written as plugins for RoboFont, some for InDesign, and others as simple CLI tools as part of a larger toolchain.

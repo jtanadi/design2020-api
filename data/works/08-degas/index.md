@@ -1,7 +1,9 @@
 ---
 title: "Degas: A Strange New Beauty"
 short: "Design proposal for an exhibition catalog."
-tags: Print Design, Book Design
+tags:
+    - Print Design
+    - Book Design
 ---
 
 *A Strange New Beauty* showcased Degas’ rarely-seen monotypes, a process that captivated him and expanded his drawing process. The book features two typographic grids: one for a longer introductory essay; another for shorter close readings that appear throughout.
