@@ -23,7 +23,7 @@ module.exports = () => {
         title,
         description: short || null,
         hero,
-        tags: tags.split(/,\s*/),
+        tags,
       };
     });
 };
