@@ -10,7 +10,7 @@ awards:
     - "[Silver, Graphis Design Annual 2019](https://www.graphis.com/competition/design-annual-2019/info/)"
     - "[Bronze, International Design Excellence Awards 2019](https://www.idsa.org/awards/idea/environments/national-veterans-memorial-and-museum)"
 footnotes:
-    - "Project completed at [Ralph Appelbaum Associates](http://www.raany.com/)."
+    - "Completed at [Ralph Appelbaum Associates](http://www.raany.com/)."
     - "Photographs courtesy of [Ralph Appelbaum Associates](http://www.raany.com/)."
 ---
 

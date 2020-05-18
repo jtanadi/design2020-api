@@ -8,7 +8,7 @@ tags:
 awards:
     - "[Finalist, SEGD 2018](https://segd.org/baptist-health-south-florida-gallery-phillip-and-patricia-frost-museum-science)"
 footnotes:
-    - "Project completed at [Ralph Appelbaum Associates](http://www.raany.com/)."
+    - "Completed at [Ralph Appelbaum Associates](http://www.raany.com/)."
     - "Photographs courtesy of [Ralph Appelbaum Associates](http://www.raany.com/)."
 ---
 
