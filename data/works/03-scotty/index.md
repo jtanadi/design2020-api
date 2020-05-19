@@ -11,9 +11,9 @@ links:
       url: https://github.com/raa-tools/scotty
 ---
 
-Scotty is a browser-based PDF viewer that leverages the WebSocket protocol. The app was developed at RAA to address the design teams’ need of reviewing architectural drawings and exhibition graphics together while working remotely.
+Scotty is a browser-based PDF viewer that leverages the WebSocket protocol. The app was developed at RAA to address the design teams’ need to review architectural drawings and exhibition graphics together while working remotely.
 
-Scotty solves the problem of having to share screens during a call or distribute documents prior to the call. The app allows all participants to navigate a PDF document in syncrhony. When viewing a document, clients maintain an open WebSocket connection to Scotty’s server, which allows a user’s actions—such as navigating to a specific page or pointing to an element with their mouse—to be propagated to all other users.
+Scotty solves the problem of having to either share screens during a call or to distribute documents prior to the call. The app allows all participants to navigate a PDF document in synchrony. When viewing a document, clients maintain an open WebSocket connection to Scotty’s server, which allows a user’s actions—such as navigating to a specific page or pointing to an element with their mouse—to be propagated to all other users.
 
 To circumvent the blocking nature of rendering PDFs on the browser, Scotty uses [conveyor](https://github.com/raa-tools/conveyor/) to convert PDF documents to optimized images before uploading them to an AWS S3 bucket.
 
