@@ -9,4 +9,4 @@ For the past couple of years I have developed a number of design and design prod
 
 Tooling has become indispensable when working on large design systems such as museum exhibits and typefaces. It has allowed design teams at RAA to generate designs quickly, create consistent fabrication-ready artwork, expedite the design production phase, and most importantly, achieve better designer experience by [eliminating toil](https://landing.google.com/sre/sre-book/chapters/eliminating-toil/).
 
-The majority of these tools are open source and can be viewed on [my GitHub page](https://github.com/jtanadi/) or [RAA Tools’ GitHub page](https://github.com/raa-tools/).
+The majority of these tools are open source and can be viewed on [my GitHub page](https://github.com/jtanadi/) or [RAA Tools’ GitHub page](https://github.com/raa-tools/). Demos of some of these tools are available below.
