@@ -2,10 +2,17 @@ const fs = require("fs");
 const matter = require("gray-matter");
 const path = require("path");
 
+const fetch = require("isomorphic-unfetch")
+
+const authHeader = require("./authHeader")
 const { worksPath } = require("./paths");
 const getHeroImage = require("./getHeroImage");
+const { apiWorks } = require("./endpoints")
+
 
 module.exports = () => {
+  const response = await fetch(`${apiWorks}/contents`, headers: authHeader)
+
   const works = fs.readdirSync(worksPath);
   return works
     .filter((work) => !work.startsWith("z-"))
