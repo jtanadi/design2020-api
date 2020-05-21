@@ -3,5 +3,16 @@
     "api/**/*": {
       "excludeFiles": "data/works/**/*"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }
