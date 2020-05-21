@@ -1,36 +1,47 @@
-const fs = require("fs");
+const fetch = require("isomorphic-unfetch");
 const matter = require("gray-matter");
-const path = require("path");
 
-const fetch = require("isomorphic-unfetch")
+const authHeader = require("./authHeader");
+const { apiWorks } = require("./endpoints");
 
-const authHeader = require("./authHeader")
-const { worksPath } = require("./paths");
-const getHeroImage = require("./getHeroImage");
-const { apiWorks } = require("./endpoints")
+module.exports = async () => {
+  const works = await (
+    await fetch(`${apiWorks}`, { headers: authHeader })
+  ).json();
 
+  const validWorks = works.filter(
+    (work) => !work.name.startsWith("z-") && work.type === "dir"
+  );
 
-module.exports = () => {
-  const response = await fetch(`${apiWorks}/contents`, headers: authHeader)
+  const retArr = [];
+  for await (let dir of validWorks) {
+    const contents = await (
+      await fetch(`${apiWorks}/${dir.name}`, { headers: authHeader })
+    ).json();
 
-  const works = fs.readdirSync(worksPath);
-  return works
-    .filter((work) => !work.startsWith("z-"))
-    .map((work) => {
-      const workFilePath = path.join(worksPath, work, "index.md");
+    const hero = contents[0].download_url;
+    const indexFile = await (
+      await fetch(`${apiWorks}/${dir.name}/index.md`, { headers: authHeader })
+    ).json();
 
-      const hero = getHeroImage(work);
+    const indexContent = Buffer.from(
+      indexFile.content,
+      indexFile.encoding
+    ).toString("utf8");
 
-      const workFile = fs.readFileSync(workFilePath, "utf8");
-      const { data } = matter(workFile);
-      const { title, tags, short } = data;
+    const { data } = matter(indexContent);
+    const { title, tags, short } = data;
 
-      return {
-        id: work,
-        title,
-        description: short || null,
-        hero,
-        tags,
-      };
-    });
+    const dirObj = {
+      id: dir.name,
+      title,
+      description: short || null,
+      hero,
+      tags,
+    };
+
+    retArr.push(dirObj);
+  }
+
+  return retArr;
 };

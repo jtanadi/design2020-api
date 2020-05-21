@@ -1,14 +1,19 @@
-const fs = require("fs");
-const { worksPath } = require("./paths");
+const fetch = require("isomorphic-unfetch");
 
-module.exports = () => {
-  const works = fs.readdirSync(worksPath);
+const authHeader = require("./authHeader");
+const { apiWorks } = require("./endpoints");
+
+module.exports = async () => {
+  const works = await (
+    await fetch(`${apiWorks}`, { headers: authHeader })
+  ).json();
+
   return works
-    .filter((work) => !work.startsWith("z-"))
-    .map((work) => {
+    .filter((work) => !work.name.startsWith("z-") && work.type === "dir")
+    .map((dir) => {
       return {
         params: {
-          id: work,
+          id: dir.name,
         },
       };
     });
