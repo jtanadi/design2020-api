@@ -1,21 +1,49 @@
-const fs = require("fs");
+const fetch = require("isomorphic-unfetch");
 const matter = require("gray-matter");
-const path = require("path");
 
-const { worksPath } = require("./paths");
-const getHeroImage = require("./getHeroImage");
-const getImages = require("./getImages");
+const authHeader = require("./authHeader");
+const { apiWorks } = require("./endpoints");
+const { isDetailFile, isImageOrVideo } = require("./checkers");
 
-module.exports = (id) => {
-  const workFilePath = path.join(worksPath, id, "index.md");
-  const hero = getHeroImage(id);
+module.exports = async (id) => {
+  const items = await (
+    await fetch(`${apiWorks}/${id}`, { headers: authHeader })
+  ).json();
 
-  const workFile = fs.readFileSync(workFilePath, "utf8");
-  const { data, content } = matter(workFile);
+  let objData = {};
+  const images = [];
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+
+    if (item.name.startsWith("z-") || item.type !== "file") {
+      continue;
+    }
+
+    if (i === 0 && isImageOrVideo(item.name)) {
+      objData.hero = item.url;
+    } else if (item.name === "index.md") {
+      const indexFile = await (
+        await fetch(item.download_url, { headers: authHeader })
+      ).text();
+
+      const { data, content } = matter(indexFile);
+      objData = { ...objData, ...data, description: content.trim() };
+    } else if (isImageOrVideo(item.name) && !isDetailFile(item.name)) {
+      const imgObj = {
+        url: item.download_url,
+      };
+
+      if (i < items.length - 1 && isDetailFile(items[i + 1].name)) {
+        imgObj.detailUrl = items[i + 1].download_url;
+      }
+
+      images.push(imgObj);
+    }
+  }
 
   return {
     id,
-    data: { hero, ...data, description: content.trim() },
-    content: getImages(id),
+    data: objData,
+    content: images,
   };
 };

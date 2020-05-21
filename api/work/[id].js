@@ -1,6 +1,6 @@
 const getWorkById = require("../../utils/getWorkById");
 
-module.exports = (req, res) => {
-  const work = getWorkById(req.query.id);
+module.exports = async (req, res) => {
+  const work = await getWorkById(req.query.id);
   res.send(work);
 };
