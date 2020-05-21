@@ -1,12 +1,10 @@
-const fetch = require("isomorphic-unfetch");
+const axios = require("axios");
 
 const authHeader = require("./authHeader");
 const { apiWorks } = require("./endpoints");
 
 module.exports = async () => {
-  const works = await (
-    await fetch(`${apiWorks}`, { headers: authHeader })
-  ).json();
+  const works = (await axios.get(`${apiWorks}`, { headers: authHeader })).data;
 
   return works
     .filter((work) => !work.name.startsWith("z-") && work.type === "dir")

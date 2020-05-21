@@ -12,5 +12,3 @@ GET https://design2020-api.now.sh/api/works
 GET https://design2020-api.now.sh/api/work/work-id
 ```
 
-## Reminder to keep this repo private!
-

@@ -1,13 +1,11 @@
-const fetch = require("isomorphic-unfetch");
+const axios = require("axios");
 const matter = require("gray-matter");
 
 const authHeader = require("./authHeader");
 const { apiWorks } = require("./endpoints");
 
 module.exports = async () => {
-  const works = await (
-    await fetch(`${apiWorks}`, { headers: authHeader })
-  ).json();
+  const works = (await axios.get(`${apiWorks}`, { headers: authHeader })).data;
 
   const validWorks = works.filter(
     (work) => !work.name.startsWith("z-") && work.type === "dir"
@@ -15,14 +13,16 @@ module.exports = async () => {
 
   const retArr = [];
   for await (let dir of validWorks) {
-    const contents = await (
-      await fetch(`${apiWorks}/${dir.name}`, { headers: authHeader })
-    ).json();
+    const contents = (
+      await axios.get(`${apiWorks}/${dir.name}`, { headers: authHeader })
+    ).data;
 
     const hero = contents[0].download_url;
-    const indexFile = await (
-      await fetch(`${apiWorks}/${dir.name}/index.md`, { headers: authHeader })
-    ).json();
+    const indexFile = (
+      await axios.get(`${apiWorks}/${dir.name}/index.md`, {
+        headers: authHeader,
+      })
+    ).data;
 
     const indexContent = Buffer.from(
       indexFile.content,
