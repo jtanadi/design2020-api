@@ -20,7 +20,7 @@ module.exports = async (id) => {
     }
 
     if (i === 0 && isImageOrVideo(item.name)) {
-      objData.hero = item.url;
+      objData.hero = item.download_url;
     } else if (item.name === "index.md") {
       const indexFile = await (
         await fetch(item.download_url, { headers: authHeader })
