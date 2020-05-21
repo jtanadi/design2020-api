@@ -7,7 +7,7 @@ tags:
 links: 
     - name: Launch
       url: https://raa-scotty.herokuapp.com/
-    - name: View on GitHub
+    - name: GitHub
       url: https://github.com/raa-tools/scotty
 ---
 

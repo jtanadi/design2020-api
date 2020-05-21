@@ -8,7 +8,7 @@ tags:
 links: 
     - name: Launch
       url: https://raa-tools.github.io/
-    - name: View on GitHub
+    - name: GitHub
       url: https://github.com/raa-tools/raa-tools.github.io
 ---
 
