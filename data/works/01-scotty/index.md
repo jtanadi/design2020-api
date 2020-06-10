@@ -18,4 +18,4 @@ Scotty solves the problem of having to either share screens during a call or to 
 
 To circumvent the blocking nature of rendering PDFs on the browser, Scotty uses [conveyor](https://github.com/raa-tools/conveyor/) to convert PDF documents to optimized images before uploading them to an AWS S3 bucket.
 
-Scotty was written in TypeScript, React, Node, and Express, and uses socket.io to manage its WebSocket connections. A redesign is in the works and can be viewed on [Figma](https://www.figma.com/file/nB8XWWZCOI7kFJGivVbsWh/scotty?node-id=0%3A1).
+Scotty was written in TypeScript, React, Node, and Express, and uses socket.io to manage its WebSocket connections. The current design is a work in progress and can be viewed on [Figma](https://www.figma.com/file/nB8XWWZCOI7kFJGivVbsWh/scotty?node-id=0%3A1).
